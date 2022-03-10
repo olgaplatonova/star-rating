@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
-import {FaStar} from 'react-icons/fa';
 import Star from '../Star/Star';
+import './StarRating.scss';
 
 //создает массив и заполняет значениями
 function initStars(totalStars, rating) {
@@ -23,12 +22,14 @@ const StarRating = ({totalStars, rating}) => {
 
     return (
         <>
+            <div className={'stars__container'}>
             {arrStars.map((item, index) => (
                 <Star key={index} selected={item} onclick={() => toggleStar(index)} />
             ))}
             <p>
-                {arrStars.filter(elem => elem === true).length} звездочек выбрано из {totalStars}
+                {arrStars.filter(elem => elem === true).length} of {totalStars} stars
             </p>
+            </div>
         </>
     );
 }

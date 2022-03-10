@@ -4,7 +4,7 @@ import {FaStar} from 'react-icons/fa';
 const Star = ({selected, onclick}) => {
     return (
         <>
-            <FaStar color={selected ? 'red' : 'grey'} onClick={onclick} size={40}/>
+            <FaStar color={selected ? '#FFC042' : '#75D1FF'} onClick={onclick} size={35}/>
         </>
     );
 }
